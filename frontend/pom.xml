@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.mycompany</groupId>
+  <artifactId>my-frontend</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>my-frontend</name>
+
+  <build>
+	  <!-- Coupled to 'test', Flutters widget tests should be run -->
+  </build>
+
+  <profiles>
+	  <profile>
+	      <id>packages-get</id>
+		  <!-- Flutter's Packages get should be run before compile 'phase' -->
+	    </profile>
+	  <profile>
+	      <id>with-backend</id>
+		  <!-- Launch Jooby server (com.mycompany:my-backend:1.0-SNAPSHOT) before test phase -->
+		  <!-- Tear down Jooby server (com.mycompany:my-backend:1.0-SNAPSHOT) after test phase-->
+	    </profile>
+	  <profile>
+	      <id>flutter-driver</id>
+		  <!-- Invoke flutter driver tests-->
+	    </profile>
+  </profiles>
+
+
+</project>
